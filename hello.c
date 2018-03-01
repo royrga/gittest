@@ -8,7 +8,12 @@
 
 int main()
 {
-    printf("Hello world\n");
+    char string[256]={0};
+
+    printf("Please, introduce a string\n");
+    gets(string);
+
+    printf("Your string is:\n%s\n", string);
 
     return 0;
 }
