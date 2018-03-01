@@ -5,6 +5,8 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include "palindrom.h"
+
 
 int main()
 {
