@@ -7,7 +7,6 @@
 #include <stdlib.h>
 #include "palindrom.h"
 
-
 int main()
 {
     char string[256]={0};
