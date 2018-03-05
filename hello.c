@@ -19,15 +19,15 @@ int main()
 	gets(string);
 
 	printf("Your string is:\n%s\n", string);
-	printf("Introduce una palabra\n");
+	printf("Provide a word\n");
 	gets(a);
-	printf("Introduce otra palabra\n");
+	printf("Provide a second word\n");
 	gets(b);
 	flag = check_anagram(a, b);
 	if (flag == 1)
-		printf("%s y %s son anagramas\n", a, b);
+		printf("%s and %s are anagrams\n", a, b);
 	else
-		printf("%s y %s no son anagramas.\n", a, b);
+		printf("%s and %s are not anagrams.\n", a, b);
 
 	return 0;
 }
