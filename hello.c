@@ -14,6 +14,7 @@ int main()
 {
 	char string[256]={0};
 	char a[100], b[100], c[100], d[100];
+	char aux[100];
 	int flag;
 
 	printf("Please, introduce a string\n");
@@ -29,9 +30,11 @@ int main()
 		printf("%s and %s are anagrams\n", a, b);
 	else
 		printf("%s and %s are not anagrams.\n", a, b);
-	printf("Provide another word");
+	
+	printf("Provide another word:\n");
 	gets(c);
-	strcpy (d, murcielago(c));
+	*aux = murcielago(c);
+	strncpy (d, aux,sizeof(d));
         printf("%s", d);
 	return 0;
 }

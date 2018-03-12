@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "Murcielago.h" 
+char message [100];
 char* murcielago (char* word ) {
-	char message [100];
 	strcpy (message, word);
 	 
 	for (int c=0; c<=100; c++) {
