@@ -14,7 +14,7 @@ int main()
 {
 	char string[256]={0};
 	char a[100], b[100], c[100], d[100],p[100];
-	char aux[100];
+	char *aux[100];
 	int flag;
 
 	printf("Please, introduce a string\n");
@@ -41,8 +41,8 @@ int main()
 	printf("Provide another word:\n");
 	gets(c);
 	*aux = murcielago(c);
-	strncpy (d, aux,sizeof(d));
-        printf("%s", d);
+	//strncpy (d, aux,sizeof(d));
+        printf("%s", *aux);
 	return 0;
 }
    
