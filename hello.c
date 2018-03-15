@@ -6,14 +6,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-#include "palindrom.h"
+#include "palindrom.c"
 #include "anagrama.h"
-#include "Murcielago.h"
+#include "Murcielago.c"
 
 int main()
 {
 	char string[256]={0};
-	char a[100], b[100], c[100], d[100], e[100], message[100];
+	char a[100], b[100], c[100], d[100], e[100], p[100];
+	char aux[100],  message[100];
 	int flag, key;
 
 	printf("Please, introduce a string\n");
@@ -29,9 +30,18 @@ int main()
 		printf("%s and %s are anagrams\n", a, b);
 	else
 		printf("%s and %s are not anagrams.\n", a, b);
-	printf("Provide another word");
+
+	printf("Provide a word to verify if it is palindrom: \n");
+	gets(p);
+	flag = is_palindrom(p);
+	if (flag == 1)
+		printf("%s is palindrom \n", p);
+	else
+		printf("%s does not palindrom \n", p);
+	printf("Provide another word:\n");
 	gets(c);
-	strcpy (d, murcielago(c));
+	*aux = murcielago(c);
+	strncpy (d, aux,sizeof(d));
         printf("%s", d);
 
 
@@ -39,7 +49,8 @@ int main()
 	gets(message);
 	printf("Insert a number to choose encryption");
 	scanf("%d",&key);
-	strcpy(e, Ccypher(message, key));
+	*aux=Ccypher(message);
+	strncpy(e, aux, sizeof(e));
 	return 0;
 }
    

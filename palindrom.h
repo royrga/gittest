@@ -1,7 +1,9 @@
 #ifndef _PALINDROM_H
 #define _PALINDROM_H
 
-int is_palindrom(char *);
+int is_palindrom(char* w);
+
+
 
 #endif
 
