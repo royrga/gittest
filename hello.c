@@ -13,8 +13,8 @@
 int main()
 {
 	char string[256]={0};
-	char a[100], b[100], c[100], d[100];
-	int flag;
+	char a[100], b[100], c[100], d[100], e[100], message[100];
+	int flag, key;
 
 	printf("Please, introduce a string\n");
 	gets(string);
@@ -33,6 +33,13 @@ int main()
 	gets(c);
 	strcpy (d, murcielago(c));
         printf("%s", d);
+
+
+	printf("Insert a word to encrypt");
+	gets(message);
+	printf("Insert a number to choose encryption");
+	scanf("%d",&key);
+	strcpy(e, Ccypher(message, key));
 	return 0;
 }
    
