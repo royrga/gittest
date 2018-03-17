@@ -1,8 +1,10 @@
 #include <stdio.h>
 #include <string.h>
-#include "Murcielago.h" 
-char message [100];
-char* murcielago (char* word ) {
+#include "Murcielago.h"
+
+static char message [100];
+
+const char* murcielago (char* word){
 	strcpy (message, word);
 	 
 	for (int c=0; c<=100; c++) {

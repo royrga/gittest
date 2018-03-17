@@ -9,24 +9,25 @@
 #include "palindrom.c"
 #include "anagrama.h"
 #include "Murcielago.c"
+#include "Ccypher.c"
 
 int main()
 {
 	char string[256]={0};
-	char a[100], b[100], c[100], d[100], e[100], p[100];
-	char aux[100],  message[100];
+	static char a[100], b[100], c[100], d[100], e[100], p[100];
+	static char aux[100],  message[100];
 	int flag, key;
 
 	printf("Please, introduce a string\n");
 	gets(string);
-
 	printf("Your string is:\n%s\n", string);
+
 	printf("Provide a word\n");
 	gets(a);
 	printf("Provide a second word\n");
 	gets(b);
 	flag = check_anagram(a, b);
-	if (flag == 1)
+    if (flag == 1)
 		printf("%s and %s are anagrams\n", a, b);
 	else
 		printf("%s and %s are not anagrams.\n", a, b);
@@ -37,20 +38,18 @@ int main()
 	if (flag == 1)
 		printf("%s is palindrom \n", p);
 	else
-		printf("%s does not palindrom \n", p);
-	printf("Provide another word:\n");
+		printf("%s is not palindrom \n", p);
+
+	printf("Provide a word to encrypt with murcielago:\n");
 	gets(c);
-	*aux = murcielago(c);
-	strncpy (d, aux,sizeof(d));
-        printf("%s", d);
+    printf("%s \n", murcielago(c));
 
-
-	printf("Insert a word to encrypt");
+	printf("Insert a word to encrypt\n");
 	gets(message);
-	printf("Insert a number to choose encryption");
+	printf("Insert a number to choose encryption\n");
 	scanf("%d",&key);
-	*aux=Ccypher(message);
-	strncpy(e, aux, sizeof(e));
+	printf("%s",Ccypher(message,key));
+
 	return 0;
 }
    

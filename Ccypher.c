@@ -2,7 +2,7 @@
 #include<stdio.h>
 #include<string.h>
 
-char* Ccypher(char* message, int key)
+const char* Ccypher(char* message, int key)
 {
 	char ch;
 	int i;
